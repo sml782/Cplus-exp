@@ -2,14 +2,14 @@
 #include <string>
 using namespace std;
 
-class myDate {
+class MyDate {
   public:
     // ! 函数名和类名相同为构造函数
-    myDate();
-    myDate(int, int, int);
-    void setDate(myDate);
+    MyDate();
+    MyDate(int, int, int);
+    void setDate(MyDate);
     void setDate(int, int, int);
-    myDate getDate();
+    MyDate getDate();
     void setYear(int);
     int getMonth();
     void printDate() const;
@@ -17,62 +17,62 @@ class myDate {
     int year, month, day;
 };
 
-myDate::myDate() {
+MyDate::MyDate() {
   year = 1970;
   month = 1;
   day = 1;
 }
 
-myDate::myDate(int y, int m, int d) {
+MyDate::MyDate(int y, int m, int d) {
   year = y;
   month = m;
   day = d;
 }
 
-void myDate::setDate(myDate date) {
+void MyDate::setDate(MyDate date) {
   year = date.year;
   month = date.month;
   day = date.day;
 }
 
-void myDate::setDate(int y, int m, int d) {
+void MyDate::setDate(int y, int m, int d) {
   year = y;
   month = m;
   day = d;
 }
 
-myDate myDate::getDate() {
+MyDate MyDate::getDate() {
   return *this;
 }
 
-void myDate::setYear(int y) {
+void MyDate::setYear(int y) {
   year = y;
 }
 
-int myDate::getMonth() {
+int MyDate::getMonth() {
   return month;
 }
 
-void myDate::printDate() const {
+void MyDate::printDate() const {
   cout << year << "/" << month << "/" << day;
 }
 
 class Student {
   public:
-    void setStudent(string, myDate);
+    void setStudent(string, MyDate);
     void setName(string);
     string getName();
-    void setBirthday(myDate);
-    myDate getBirthday();
+    void setBirthday(MyDate);
+    MyDate getBirthday();
     void printStudent() const;
   private:
     string name;
-    myDate birthday;
+    MyDate birthday;
 };
 
-void Student::setStudent(string s, myDate myDate) {
+void Student::setStudent(string s, MyDate MyDate) {
   name = s;
-  birthday = myDate;
+  birthday = MyDate;
 }
 
 void Student::setName(string s) {
@@ -83,11 +83,11 @@ string Student::getName() {
   return name;
 }
 
-void Student::setBirthday(myDate date) {
+void Student::setBirthday(MyDate date) {
   birthday.setDate(date);
 }
 
-myDate Student::getBirthday() {
+MyDate Student::getBirthday() {
   return birthday;
 }
 
@@ -106,19 +106,19 @@ int main() {
 
   /*** 含有构造函数的类使用 ***/
   // 1. 直接定义
-  // myDate myDate;
-  // myDate.setDate(year, month, day);
+  // MyDate MyDate;
+  // MyDate.setDate(year, month, day);
   // 2. 通过构造函数
-  myDate ddate = myDate(year, month, day);
+  MyDate ddate = MyDate(year, month, day);
 
 
   // 直接调用
-  // ss.setStudent(name, myDate);
+  // ss.setStudent(name, MyDate);
   // ss.printStudent();
 
   // 指针调用
   // Student *sp = &ss;
-  // sp->setStudent(name, myDate);
+  // sp->setStudent(name, MyDate);
   // sp->printStudent();
 
   // 引用调用
