@@ -56,13 +56,57 @@ void MyDate::printDate() const {
   cout << year << "/" << month << "/" << day;
 }
 
+class Student {
+  public:
+    void setStudent(string, MyDate);
+    void setName(string);
+    string getName();
+    void setBirthday(MyDate);
+    MyDate getBirthday();
+    void printStudent() const;
+  private:
+    string name;
+    MyDate birthday;
+};
+
+void Student::setStudent(string s, MyDate mydate) {
+  name = s;
+  birthday = mydate;
+}
+
+void Student::setName(string s) {
+  name = s;
+}
+
+string Student::getName() {
+  return name;
+}
+
+void Student::setBirthday(MyDate mydate) {
+  birthday.setDate(mydate);
+}
+
+MyDate Student::getBirthday() {
+  return birthday;
+}
+
+void Student::printStudent() const {
+  cout << "姓名: " << name << "\t生日:";
+  birthday.printDate();
+  cout << endl;
+}
+
 int main() {
+  Student ss;
   MyDate mydate;
-  char name;
+  string name;
   int year, month, day;
-  cout << "请输入姓名/生日, 格式为\"姓名 年 月 日\", 以空格分割";
-  cin >> year >> month >> day;
-  cout << "姓名:" << name << "\t生日:" << year << "/" << month << "/" << day;
+  cout << "请输入姓名/生日, 格式为\"姓名 年 月 日\", 以空格分割: ";
+  cin >> name >> year >> month >> day;
+  mydate.setDate(year, month, day);
+  ss.setStudent(name, mydate);
+
+  ss.printStudent();
 
   return 0;
 }
