@@ -10,6 +10,7 @@ void SwapValue(int a, int b) {
 
 void SwapRef(int &a, int &b) {
   int temp = a;
+  debu
   a = b;
   b = temp;
   cout<<"SwapRef()中:\t\ta="<<a<<", b="<<b<<endl;
