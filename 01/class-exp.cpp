@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+// ! 类
+
 class MyDate {
   public:
     // ! 函数名和类名相同为构造函数
