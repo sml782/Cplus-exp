@@ -2,6 +2,8 @@
   "files.associations": {
     "*.jst": "javascript",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "cmath": "cpp",
+    "iterator": "cpp"
   }
 }
