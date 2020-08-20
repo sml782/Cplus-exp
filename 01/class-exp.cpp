@@ -23,6 +23,10 @@ MyDate::MyDate() {
   year = 1970;
   month = 1;
   day = 1;
+  // ! 或者使用 this 指针赋值
+  // this->year = 1970;
+  // this->month = 1;
+  // this->day = 1;
 }
 
 MyDate::MyDate(int y, int m, int d) {
