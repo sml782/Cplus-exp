@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// ! 运算符重载
+// ! 双目运算符重载
 // ! 1. 直接类内定义 - 第一个值左值纳入this, 第二个值纳入 参数
 // ! 2. friend - 运算符两边值都纳入 参数
 
