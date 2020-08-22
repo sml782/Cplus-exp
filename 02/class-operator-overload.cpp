@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+// ! 运算符重载
+// ! 1. 直接类内定义 - 第一个值左值纳入this, 第二个值纳入 参数
+// ! 2. friend - 运算符两边值都纳入 参数
+
 // 复数类
 class MyComplex {
   private:
@@ -12,7 +16,8 @@ class MyComplex {
     void outCom();
     
     // 开始重载
-    MyComplex operator-(const MyComplex &);
+    // MyComplex operator-(const MyComplex &);
+    friend MyComplex operator-(const MyComplex &, const MyComplex &);
     friend MyComplex operator+(const MyComplex &, const MyComplex &);
 };
 
@@ -24,8 +29,12 @@ void MyComplex::outCom() {
   cout << "(" << real << ", " << imag << ")";
 }
 
-MyComplex MyComplex::operator-(const MyComplex &c) {
-  return MyComplex(this->real - c.real, this->imag - c.imag);
+// MyComplex MyComplex::operator-(const MyComplex &c) {
+//   return MyComplex(this->real - c.real, this->imag - c.imag);
+// }
+
+MyComplex operator-(const MyComplex &c1, const MyComplex &c2) {
+  return MyComplex(c1.real - c2.real, c1.imag - c2.imag);
 }
 
 MyComplex operator+(const MyComplex &c1, const MyComplex &c2) {
