@@ -10,7 +10,7 @@ class Test {
     Test();
     Test(int, float, char);
     friend ostream &operator<<(ostream &, Test obj);
-    friend istream &operator>>(istream &, Test& obj);
+    friend istream &operator>>(istream &, Test &obj);
 };
 
 Test::Test(): i(0), f(0), ch('\0') {}
@@ -25,7 +25,7 @@ ostream &operator<<(ostream& stream, Test obj) {
   return stream;
 }
 
-istream &operator>>(istream& stream, Test& obj) {
+istream &operator>>(istream &stream, Test &obj) {
   stream >> obj.i >> obj.f >> obj.ch;
   return stream;
 }
