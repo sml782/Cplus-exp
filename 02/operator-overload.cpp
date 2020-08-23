@@ -16,9 +16,9 @@ class MyComplex {
     void outCom();
     
     // 开始重载
-    // MyComplex operator-(const MyComplex &);
-    friend MyComplex operator-(const MyComplex &, const MyComplex &);
-    friend MyComplex operator+(const MyComplex &, const MyComplex &);
+    // MyComplex operator-(const MyComplex&);
+    friend MyComplex operator-(const MyComplex&, const MyComplex&);
+    friend MyComplex operator+(const MyComplex&, const MyComplex&);
 };
 
 MyComplex::MyComplex(): real(0), imag(0) {}
@@ -29,15 +29,15 @@ void MyComplex::outCom() {
   cout << "(" << real << ", " << imag << ")";
 }
 
-// MyComplex MyComplex::operator-(const MyComplex &c) {
+// MyComplex MyComplex::operator-(const MyComplex& c) {
 //   return MyComplex(this->real - c.real, this->imag - c.imag);
 // }
 
-MyComplex operator-(const MyComplex &c1, const MyComplex &c2) {
+MyComplex operator-(const MyComplex& c1, const MyComplex& c2) {
   return MyComplex(c1.real - c2.real, c1.imag - c2.imag);
 }
 
-MyComplex operator+(const MyComplex &c1, const MyComplex &c2) {
+MyComplex operator+(const MyComplex& c1, const MyComplex& c2) {
   return MyComplex(c1.real + c2.real, c1.imag + c2.imag);
 }
 

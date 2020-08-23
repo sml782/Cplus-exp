@@ -13,7 +13,7 @@ class Test {
     static int func() {
       return x;
     };
-    static void sfunc(Test &r, int a) {
+    static void sfunc(Test& r, int a) {
       r.n = a;
     }
     int getN() {

@@ -13,7 +13,7 @@ class Pointer {
 
 Pointer::Pointer(): a(100), p(new int(10)) {}
 
-Pointer::Pointer(const Pointer &tempP) {
+Pointer::Pointer(const Pointer& tempP) {
   if (this != &tempP) {
     a = tempP.a;
     p = tempP.p;

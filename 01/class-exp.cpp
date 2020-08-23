@@ -128,7 +128,7 @@ int main() {
   // sp->printStudent();
 
   // 引用调用
-  Student &sy = ss;
+  Student& sy = ss;
   sy.setStudent(name, ddate);
   sy.printStudent();
 
