@@ -1,3 +1,5 @@
+// ! 虚函数首先要看基类中函数是否是虚函数, 有则可多态, 无则静态就近原则
+
 #include <iostream>
 using namespace std;
 
