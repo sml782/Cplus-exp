@@ -1,3 +1,5 @@
+// 不仅能在成员函数中调用虚函数, 也可以在构造函数和析构函数中调用虚函数，但这样调用的虚函数不是多态的.
+
 #include <iostream>
 using namespace std;
 
