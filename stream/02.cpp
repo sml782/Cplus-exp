@@ -16,7 +16,7 @@ int main() {
   // 3) 使用 `showbase` 和 `setbase` 分别输出
   cout << "3) " << showbase; // 显示数值进制的前缀
 
-  cout << setbase(10) << m << "=" << setbase(16) << m << " = " << setbase(8) << m << endl;
+  cout << setbase(10) << m << " = " << setbase(16) << m << " = " << setbase(8) << m << endl;
 
   return 0;
 }
