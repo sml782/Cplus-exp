@@ -8,7 +8,7 @@ int main() {
 
   cout << "1) " << setiosflags(ios::scientific|ios::showpos) << x << endl;
 
-  cout << "2) " << resetiosflags(ios::scientific) << setiosflags(ios::fixed) << setprecision(2) << x << endl;
+  cout << "2) " << resetiosflags(ios::scientific) << setiosflags(ios::fixed) << x << endl;
 
   cout << "3) " << resetiosflags(ios::fixed) << setiosflags(ios::scientific|ios::showpos) << x << endl;
   
