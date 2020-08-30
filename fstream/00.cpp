@@ -9,7 +9,7 @@ int main() {
   int y;
   cin >> x >> y;
   // fopen("test.txt", "w");
-  freopen("../testfile/test.txt", "w", stdout);
+  freopen("./testfile/test.txt", "w", stdout);
   if (y == 0) {
     cerr << "error." << endl;
   } else {
