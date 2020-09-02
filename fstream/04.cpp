@@ -1,3 +1,5 @@
+// 写二进制文件
+
 #include <iostream>
 #include <fstream>
 
