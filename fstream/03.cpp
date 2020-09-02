@@ -1,3 +1,5 @@
+// get() 模拟 getline()
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
