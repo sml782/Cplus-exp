@@ -9,6 +9,7 @@
     "ios": "cpp",
     "iosfwd": "cpp",
     "fstream": "cpp",
-    "istream": "cpp"
+    "istream": "cpp",
+    "string": "cpp"
   }
 }
